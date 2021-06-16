@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="main">
+            <form class="form" name="form">
+                <label class="label" for="input">
+                    <input class="form__input" type="text" id="input" name="input" placeholder="Write movie name">
+                    <div class="form__cross hidden">&times;</div>
+                </label>
+                <button class="button form__button" name="search" type="button">search</button>
+            </form>
+            <div class="movies">
+                <div class="movies__item hidden">
+                    <div class="movies__poster">
+                        <img src="#" alt="#">
+                    </div>
+                    <div class="movies__name">
+                        <h2></h2>
+                    </div>
+                    <h4 class="movies__type"></h4>
+                    <h4 class="movies__year"></h4>
+                    <button class="button movies__more"></button>
+                </div>
+            </div>
+            <div class="about hidden">
+                <div class="about__fade">
+                    <div class="about__inner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>

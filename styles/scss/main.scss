@@ -1,0 +1,236 @@
+@import './base/reset';
+@import './common/page';
+
+body {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+b {
+	font-weight: bold;
+}
+
+// Main ====================================>
+.main {
+	width: 80vw;
+	margin: 0 auto;
+}
+
+// Form ====================================>
+.form {
+	display: flex;
+	justify-content: space-between;
+	margin: 16px 0px;
+}
+
+.label,
+.form__button {
+	width: 49.5%;
+	border-radius: 4px;
+}
+
+// Input ====================================>
+.form__input {
+	width: 100%;
+	border: 1px solid lightgray;
+	padding: 6px 8px;
+	border-radius: 4px;
+
+	&:hover,
+	&:focus {
+		box-shadow: 0 0 3px 0 blue;
+	}
+}
+
+
+// Cross ====================================>
+.label {
+	position: relative;
+}
+
+.form__cross {
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	font-size: 18px;
+	text-align: center;
+	line-height: 20px;
+	cursor: pointer;
+}
+
+// Button ====================================>
+.button {
+	color: white;
+	background-color: rgb(0, 184, 0);
+	border: 1px solid rgb(0, 160, 0);
+	border-radius: 4px;
+	padding: 6px 8px;
+
+	&:hover,
+	&:focus {
+		box-shadow: 0 0 2px 1px rgb(0, 199, 0);
+		background-color: lighten($color: rgb(0, 184, 0), $amount: 2.5);
+	}
+}
+
+// Movies ====================================>
+.movies {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 5px;
+	margin-right: -20px;
+}
+
+
+// Items ====================================>
+.movies__item {
+	max-width: 23%;
+	width: 100%;
+	min-height: 88vh;
+	border-radius: 4px;
+	border: 1px solid lightgray;
+	margin-bottom: 30px;
+	margin-right: 20px;
+}
+
+// Poster ====================================>
+.movies__poster {
+	height: 68%;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	box-shadow: 0 0 8px 1px black;
+
+	>img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+// Name ====================================>
+.movies__name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	height: 66px;
+	padding: 0 20px;
+	font-weight: bold;
+	text-align: center;
+	background-color: lightgray;
+}
+
+// Type/Year ====================================>
+.movies__type,
+.movies__year {
+	padding: 20px 0 0;
+	font-size: 15px;
+	text-align: center;
+}
+
+// More ====================================>
+.movies__more {
+	width: 100%;
+	margin-top: 20px;
+	font-size: 15px;
+	border-radius: 0;
+	border: none;
+
+	&:hover,
+	&:focus {
+		box-shadow: 0 0 2px 0 rgb(0, 199, 0);
+	}
+}
+
+// About ====================================>
+.about__fade {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.about__inner {
+	width: 86vw;
+	height: 94vh;
+	border-radius: 4px;
+	background-color: white;
+	outline: lightgray solid 1px;
+	outline-offset: -16px;
+	padding: 24px;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.about__poster {
+	width: 35%;
+	background-color: black;
+
+	>img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.about__main {
+	width: 64%;
+	font-size: 15px;
+	overflow: hidden;
+	line-height: 1.3;
+}
+
+.about__name {
+	font-size: 20px;
+	padding: 20px 0;
+	font-weight: bold;
+	text-align: center;
+	background-color: lightgray;
+	margin-bottom: 14px;
+}
+
+.about__type {
+	color: gray;
+	margin-bottom: 14px;
+}
+
+.about__description,
+.about__direct,
+.about__write,
+.about__starring,
+.about__box-office,
+.about__awards {
+	margin-bottom: 14px;
+}
+
+@media screen and (max-width: 1240px) {
+	.movies__item {
+		max-width: 30%;
+		min-height: 84vh;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.movies__item {
+		min-height: 80vh;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.movies__item {
+		max-width: 47%;
+		min-height: 76vh;
+	}
+}
+
+// Hidden
+.hidden {
+	display: none;
+}

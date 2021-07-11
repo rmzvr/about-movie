@@ -56,13 +56,13 @@ class GetData {
 		this.byID = byID;
 	}
 	async getShortData() {
-		let response = await fetch(`http://www.omdbapi.com/?s=${this.byTitle}&plot=full&apikey=eeb56d4b`);
+		let response = await fetch(`https://www.omdbapi.com/?s=${this.byTitle}&plot=full&apikey=eeb56d4b`);
 		let data = await response.json();
 
 		return data;
 	}
 	async getFullData() {
-		let response = await fetch(`http://www.omdbapi.com/?i=${this.byID}&plot=full&apikey=eeb56d4b`);
+		let response = await fetch(`https://www.omdbapi.com/?i=${this.byID}&plot=full&apikey=eeb56d4b`);
 		let data = await response.json();
 
 		return data;
